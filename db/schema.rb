@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2020_05_18_184457) do
 
   create_table "styles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "title"
-    t.text "body"
-    t.string "image_id"
+    t.string "title", null: false
+    t.text "body", null: false
+    t.string "image_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
