@@ -5,6 +5,9 @@ kamigram10
 得意なスタイル
 好きなスタイルをみんなで共有しよう
  
+#url
+https://kamigram10.herokuapp.com/
+
 # DEMO
  
 https://gyazo.com/cc4ae895b9651e423cad1fa45c4c8ca5
