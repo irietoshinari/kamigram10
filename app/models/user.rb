@@ -6,4 +6,5 @@ class User < ApplicationRecord
   attachment :profile_image
   has_many :styles, dependent: :destroy
   validates :username, presence: true
+  has_many :comments
 end
