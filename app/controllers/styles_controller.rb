@@ -16,6 +16,8 @@ class StylesController < ApplicationController
   end
   def show
     @style = Style.find(params[:id])
+    @comment = Comment.new
+    @comments = @style.comments.includes(:user)
   end
   def edit
     @style = Style.find(params[:id])
