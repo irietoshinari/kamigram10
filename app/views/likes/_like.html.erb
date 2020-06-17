@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+  <% if style.like_user(current_user.id) %>
+    <%= button_to style_likes_path(likes, style_id: style.id), method: :delete, id: "like-button", remote: true do %>
+     
+      <span>
+        <%= style.likes_count %>
+      </span>
+    <% end %>
+  <% else %>
+    <%= button_to style_likes_path(style), id: "like-button", remote: true do %>
+      
+      <span>
+        <%= style.likes_count %>
+      </span>
+    <% end %>
+  <% end %>
+<% else %>
+  
+    <span>
+      <%= style.likes_count %>
+    </span>
+<% end %>

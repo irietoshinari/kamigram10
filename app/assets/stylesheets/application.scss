@@ -12,9 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 @import "bulma";
-
+@import "font-awesome";
 
 .notification:not(:last-child){
 	margin-bottom: 0;
@@ -35,3 +36,6 @@
 	background-color: darksalmon;
 }
 
+input.button{
+	width: 134px;
+}

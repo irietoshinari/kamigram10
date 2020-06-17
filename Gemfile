@@ -67,6 +67,8 @@ gem "refile-mini_magick"
 gem "bulma-rails"
 gem 'mysql2'
 gem 'pry-rails'
+gem 'material_icons'
+gem 'font-awesome-rails'
 group :production do
   gem 'pg'
 end
