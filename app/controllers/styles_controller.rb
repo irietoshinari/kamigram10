@@ -1,5 +1,5 @@
 class StylesController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show, :create]
   def new
     @style = Style.new
   end
@@ -16,6 +16,7 @@ class StylesController < ApplicationController
   end
   def show
     @style = Style.find(params[:id])
+    @like_count = Like.where(style_id: params[:style_id]).count
     @comment = Comment.new
     @comments = @style.comments.includes(:user)
   end
@@ -41,6 +42,6 @@ class StylesController < ApplicationController
 
   private
   def style_params
-    params.require(:style).permit(:title, :body, :image, :comment)
+    params.require(:style).permit(:title, :body, :image, :comment, :like)
   end
 end
