@@ -16,7 +16,6 @@ class StylesController < ApplicationController
   end
   def show
     @style = Style.find(params[:id])
-    @like_count = Like.where(style_id: params[:style_id]).count
     @comment = Comment.new
     @comments = @style.comments.includes(:user)
   end
