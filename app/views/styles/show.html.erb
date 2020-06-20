@@ -72,8 +72,6 @@
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
     <div class="comments">
-      <div id="likes_buttons_<%= @style.id %>">
-        <%= render partial: 'likes/like', locals: { style: @style, likes: @likes} %>
       </div>
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
